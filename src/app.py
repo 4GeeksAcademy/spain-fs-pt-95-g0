@@ -49,6 +49,9 @@ def handle_invalid_usage(error):
 
 # generate sitemap with all your endpoints
 
+@app.route('/hello')
+def handle_hello():
+    return 'Hola!', 200
 
 @app.route('/')
 def sitemap():
