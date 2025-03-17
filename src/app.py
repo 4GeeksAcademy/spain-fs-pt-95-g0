@@ -53,6 +53,11 @@ def handle_invalid_usage(error):
 def handle_hello():
     return 'Hola!', 200
 
+@app.route('/health-check')
+def handle_health_check():
+    return 'Server did respond!', 200
+
+
 @app.route('/')
 def sitemap():
     if ENV == "development":
