@@ -49,6 +49,10 @@ def handle_invalid_usage(error):
 
 # generate sitemap with all your endpoints
 
+@app.route('/health-check')
+def handle_health_check():
+    return 'Server did respond!', 200
+
 
 @app.route('/')
 def sitemap():
